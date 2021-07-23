@@ -1,17 +1,31 @@
 import React from 'react'
+import { connect } from 'react-redux';
+import Groups from './components/Groups'
+import GroupInputForm from './components/GroupsInputForm'
 
 
 
 class GroupsContainer extends React.Component {
+
+    componentDidMount() {
+
+    }
+
+    
     render () {
         return (
             <div >
-                GroupsContainer
+                <GroupInputForm/>
+                <Groups/>
             </div>
         )
     }
-
-
 }
 
-export default GroupsContainer
+const mapStateToProps = state => {
+    return {
+        groups: state.groups
+    }
+}
+
+export default connect(mapStateToProps)(GroupsContainer)
