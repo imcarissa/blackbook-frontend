@@ -1,17 +1,12 @@
 import React from 'react'
-import GroupsContainer from '../containers/GroupsContainer'
 
 
-const Accounts = (props) => {
+const Groups = (props) => {
     return (
         <div>
-            Groups
+            {props.groups.map(group => <li key={group.id}>{group.name} - {group.description}</li> )}
         </div>
     )
-
-
-
-
 }
 
 export default Groups
