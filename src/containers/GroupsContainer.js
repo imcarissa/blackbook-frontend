@@ -17,7 +17,7 @@ class GroupsContainer extends React.Component {
         return (
             <div >
                 <GroupInputForm/>
-                <Groups/>
+                <Groups groups={this.props.groups}/>
             </div>
         )
     }
