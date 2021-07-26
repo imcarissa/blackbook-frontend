@@ -19,6 +19,11 @@ class GroupsInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        this.setState({
+            name: '',
+            category: '',
+            description: ''
+        })
         this.props.addGroup(this.state)
     }
 
