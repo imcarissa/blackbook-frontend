@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { addGroup } from '../actions/addGroup'
 
 
 class GroupsInput extends React.Component {
@@ -15,8 +17,9 @@ class GroupsInput extends React.Component {
         })
     }
 
-    handleSubmit = () => {
-        
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addGroup(this.state)
     }
 
     render () {
@@ -39,4 +42,4 @@ class GroupsInput extends React.Component {
     }
 }
 
-export default GroupsInput
+export default connect(null, {addGroup})(GroupsInput)
