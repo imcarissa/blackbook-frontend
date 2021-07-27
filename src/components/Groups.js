@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route, Link } from 'react-router-dom'
 import Group from './Group'
 
 
@@ -6,7 +7,9 @@ const Groups = (props) => {
     return (
         <div>
             {props.groups.map(group => 
-            <div key={group.id}><Group group={group}/></div>)}
+            <li key={group.id}>
+                <Link to = {`/groups/${group.id}`}>{group.name}</Link>
+            </li> )}
         </div>
     )
 }
