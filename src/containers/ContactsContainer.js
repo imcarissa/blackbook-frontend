@@ -10,7 +10,7 @@ class ContactsContainer extends React.Component {
     render() {
         return (
             <div>
-                <ContactsInput/>
+                <ContactsInput/><br/><br/>
                 <Contacts contacts={this.props.group && this.props.group.contacts}/>
             </div>
         )
