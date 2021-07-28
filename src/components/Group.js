@@ -12,7 +12,7 @@ const Group = (props) => {
         <h2>
           {group ? group.name : null} -  {group ? group.description : null}
         </h2>
-        <ContactsContainer/>
+        <ContactsContainer group={group}/>
       </div>
     )
 }
