@@ -25,6 +25,8 @@ class GroupsContainer extends React.Component {
     }
 }
 
+    // ContactsInput form here
+
 const mapStateToProps = state => {
     return {
         groups: state.groups
