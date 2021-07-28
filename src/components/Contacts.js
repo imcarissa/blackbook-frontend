@@ -5,7 +5,14 @@ const Contacts = (props) => {
     
     return (
         <div>
-            - list of contacts is here -
+            - diplay each contact -
+            {props.contacts && props.contacts.map(contact =>
+                <li key={contact.id}>
+                {contact.name}<br/>
+                - {contact.email} - {contact.phone_number}<br/>
+                - {contact.notes}
+                </li>
+            )}
         </div>
     )
 }
