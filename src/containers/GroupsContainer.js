@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { fetchGroups } from '../actions/fetchGroups'
 import Group from '../components/Group'
 import Groups from '../components/Groups'
@@ -15,9 +15,11 @@ class GroupsContainer extends React.Component {
     render() {
         return (
             <div>
-            <Route path = '/groups/new' component = {GroupInput} />
-            <Route path = '/groups/:name' render = {(routerProps) => <Group {...routerProps} groups = {this.props.groups}/>} />
-            <Route exact path = '/groups' render = {(routerProps) => <Groups {...routerProps} groups = {this.props.groups}/>} />
+              <Switch>
+                <Route path='/groups/new' component = {GroupInput} />
+                <Route path='/groups/:id' render = {(routerProps) => <Group {...routerProps} groups = {this.props.groups}/>} />
+                <Route exact path='/groups' render = {(routerProps) => <Groups {...routerProps} groups = {this.props.groups}/>} />
+              </Switch>
             </div>
         )
     }
