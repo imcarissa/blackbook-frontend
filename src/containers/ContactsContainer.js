@@ -9,8 +9,8 @@ class ContactsContainer extends React.Component {
             <div>
                 <ContactsInput/>
             </div>
-            )
-        }
+        )
+    }
 }
 
 export default ContactsContainer
