@@ -1,4 +1,5 @@
 import React from 'react'
+import ContactsInput from '../components/ContactsInput'
 
 
 class ContactsContainer extends React.Component {
@@ -6,8 +7,10 @@ class ContactsContainer extends React.Component {
     render() {
         return (
             <div>
-                ContactsContainer
+                <ContactsInput/>
             </div>
             )
         }
 }
+
+export default ContactsContainer
