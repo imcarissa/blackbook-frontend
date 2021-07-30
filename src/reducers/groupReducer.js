@@ -5,6 +5,8 @@ export default function groupReducer(state = {groups: []}, action) {
             return {groups: action.payload}
         case 'ADD_GROUP':
             return {...state, groups: [...state.groups, action.payload]}
+        case 'ADD_CONTACT':
+            return {}
         default:
             return state
     }
