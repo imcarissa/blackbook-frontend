@@ -33,16 +33,14 @@ class ContactsInput extends React.Component {
             <div>
                 - the Contacts Input Form here -
                 <form onSubmit={this.handleSubmit}>
-                ****    <select name="category" value={this.state.name} onChange={this.handleChange}>
-                        <option>category</option> 
-                    </select> **** 
-                    <br/>
-
                     <label>Name:</label>
-                    <input type="text" name="name" value={this.state.name}/><br/>
-                    <label>Phone Number:</label><input type="text"/><br/>
-                    <label>Email:</label><input type="text"/><br/>
-                    <label>Notes:</label><input type="text"/><br/>
+                    <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/><br/>
+                    <label>Phone Number:</label>
+                    <input type="text" name="phone_number" value={this.state.phone_number} onChange={this.handleChange}/><br/>
+                    <label>Email:</label>
+                    <input type="text" name="email" value={this.state.email} onChange={this.handleChange}/><br/>
+                    <label>Notes:</label>
+                    <input type="text"name="notes" value={this.state.notes} onChange={this.handleChange} /><br/>
                     <input type="submit"/>
                 </form>
             </div>
