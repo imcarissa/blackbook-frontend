@@ -1,4 +1,4 @@
-export const addGroup = (data) => {
+export const editGroup = (data) => {
 
     return (dispatch) => {
         fetch(`http://localhost:3000/api/v1/accounts/${data.id}`, {

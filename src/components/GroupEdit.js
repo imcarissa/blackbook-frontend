@@ -20,7 +20,7 @@ class GroupEdit extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         let group = {...this.state, id: this.props.group.id}
-        this.props.editGroup()
+        this.props.editGroup(group)
         this.setState({
             name: '',
             category: '',
