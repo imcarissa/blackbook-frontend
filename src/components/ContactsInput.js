@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { addContact } from '../actions/addContact'
 
 class ContactsInput extends React.Component {
 
@@ -18,7 +19,13 @@ class ContactsInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-            
+        this.props.addContact(this.state, this.props.group.id) 
+        this.setState({
+            name: '',
+            email: '',
+            phone_number: '',
+            notes: ''
+        })
     }
 
     render() {
@@ -43,4 +50,4 @@ class ContactsInput extends React.Component {
     }
 }
 
-export default connect(null)(ContactsInput)
+export default connect(null, {addContact})(ContactsInput)
